@@ -8,19 +8,44 @@ html {
 body {
   background: lightblue;
 }
+
 .articles {
-  overflow: auto;
+  overflow: visible;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
 }
-.image-title {
-  background-color: #222;
-}
-.image-tagline {
-  background-color: red;
-}
+
 .articles article {
   float: left;
   margin: 0px;
   width: 100%;
+  max-width: 320px;
+  max-height: 320px;
+  object-fit: cover;
+}
+.articles .innerbox {
+  position: relative;
+}
+
+.articles img {
+  /* position: relative; */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image-text {
+  position: relative;
+  top: -150px;
+  left: -5px;
+}
+.image-title {
+  background-color: white;
+  padding: 5px;
+}
+.image-tagline {
+  background-color: white;
+  padding: 5px;
 }
 /*
 MEDIA QUERIES SECTION
