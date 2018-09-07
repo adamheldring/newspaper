@@ -1,22 +1,36 @@
 * {
   box-sizing: border-box;
+  font-family: 'Patua One', cursive;
 }
 html {
   background: #f2f1f4;
   color: #19171c;
 }
-body {
-  background: lightblue;
+
+#herobox {
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 950px; /* compensated for articles 5px padding*/
+  max-height: 600px;
+  object-fit: scale-down;
 }
+#hero img {
+  /* position: relative; */
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 .articles {
   overflow: visible;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
+  max-width: 960px;
+  background-color: pink;
 }
 
-.articles article {
+.articles .outerbox {
   float: left;
   margin: 0px;
   width: 100%;
@@ -25,7 +39,8 @@ body {
   object-fit: cover;
 }
 .articles .innerbox {
-  position: relative;
+  /* position: relative; */
+  padding: 5px;
 }
 
 .articles img {
@@ -36,16 +51,25 @@ body {
 
 .image-text {
   position: relative;
-  top: -150px;
-  left: -5px;
+  top: -120px;
+  left: -7px;
+  /* padding: 5px; */
+  border: 7px solid white;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  padding-right: 5px;
 }
 .image-title {
   background-color: white;
-  padding: 5px;
+  padding-right: 5px;
 }
 .image-tagline {
+  /* position: absolute; */
+  top: -6px;
   background-color: white;
-  padding: 5px;
+  font-size: 0.8em;
+  /* padding: 5px; */
 }
 /*
 MEDIA QUERIES SECTION
@@ -54,18 +78,12 @@ Default is mobile view, then changes with growing screensize,.
 
 /* Tablet */
 @media (min-width: 600px) {
-  body {
-    background: pink;
-  }
   .articles article {
     width: 50%;
 }
 
 /* Desktop */
 @media (min-width: 900px) {
-  body {
-    background: yellow;
-  }
   .articles article {
     width: 33.33%;
   }
