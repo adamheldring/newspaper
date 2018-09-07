@@ -1,4 +1,47 @@
+* {
+  box-sizing: border-box;
+}
 html {
   background: #f2f1f4;
   color: #19171c;
+}
+body {
+  background: lightblue;
+}
+.articles {
+  overflow: auto;
+}
+.image-title {
+  background-color: #222;
+}
+.image-tagline {
+  background-color: red;
+}
+.articles article {
+  float: left;
+  margin: 0px;
+  width: 100%;
+}
+/*
+MEDIA QUERIES SECTION
+Default is mobile view, then changes with growing screensize,.
+*/
+
+/* Tablet */
+@media (min-width: 600px) {
+  body {
+    background: pink;
+  }
+  .articles article {
+    width: 50%;
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  body {
+    background: yellow;
+  }
+  .articles article {
+    width: 33.33%;
+  }
 }
