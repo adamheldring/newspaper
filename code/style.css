@@ -3,7 +3,7 @@
   font-family: 'Patua One', cursive;
 }
 html {
-  background: #f2f1f4;
+  background: lightblue;  /* org background color #f2f1f4 */
   color: #19171c;
 }
 
@@ -11,66 +11,83 @@ html {
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-  max-width: 950px; /* compensated for articles 5px padding*/
+  max-width: 950px;
   max-height: 600px;
   object-fit: scale-down;
 }
 #hero img {
-  /* position: relative; */
   max-width: 100%;
   max-height: 100%;
 }
 
 
-.articles {
-  overflow: visible;
+.article-section {
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 5px;
   max-width: 960px;
-  background-color: pink;
 }
 
-.articles .outerbox {
+.article-section .outerbox {
   float: left;
   margin: 0px;
-  width: 100%;
-  max-width: 320px;
-  max-height: 320px;
-  object-fit: cover;
+  padding: 0px;
 }
-.articles .innerbox {
-  /* position: relative; */
+
+.article-section .innerbox {
+  position: relative;
   padding: 5px;
 }
 
-.articles img {
-  /* position: relative; */
+.article-section img {
   max-width: 100%;
   max-height: 100%;
 }
 
 .image-text {
-  position: relative;
-  top: -120px;
-  left: -7px;
-  /* padding: 5px; */
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+
+  /* Below: Using a left side border to simulate left side padding -
+  giving padding to broken lines too, not only first line.
+  (Could have used box-shadow for this too like I did right side padding below
+  but wanted to try and use both techniques for this excersice and for future reference.) */
   border: 7px solid white;
   border-top: none;
   border-right: none;
   border-bottom: none;
   padding-right: 5px;
+
+  max-width: 95% /* Makes sure that the right side box-shadow "padding" on text never touches end of container  */
 }
+
 .image-title {
   background-color: white;
-  padding-right: 5px;
+  font-size: 33px;
+  display: inline;
+
+  /* Using a right-side only box-shadow to simulate right-side padding -
+  giving padding to broken line too, not only last line.*/
+  box-shadow: 7px 0 0 white;
+
 }
 .image-tagline {
-  /* position: absolute; */
-  top: -6px;
   background-color: white;
-  font-size: 0.8em;
-  /* padding: 5px; */
+  box-shadow: 7px 0 0 white;
 }
+.image-tagline.over-tag {
+  display: inline;
+}
+.image-tagline.under-tag {
+  display: none;
+}
+.footer {
+  clear: both;
+  background: yellow;
+}
+
 /*
 MEDIA QUERIES SECTION
 Default is mobile view, then changes with growing screensize,.
@@ -78,13 +95,37 @@ Default is mobile view, then changes with growing screensize,.
 
 /* Tablet */
 @media (min-width: 600px) {
-  .articles article {
+  body {
+    /* background-color: yellow; */
+  }
+  .article-section article {
     width: 50%;
+  }
+  .image-title {
+    font-size: 24px;
+  }
+  .image-tagline.over-tag {
+    display: none;
+  }
+  .image-tagline.under-tag {
+    display: inline;
 }
 
 /* Desktop */
 @media (min-width: 900px) {
-  .articles article {
+  body {
+    background-color: pink;
+  }
+  .article-section article {
     width: 33.33%;
   }
+  /* Bigger headlines for one-column view */
+  .image-title {
+    font-size: 24px;
+  }
+  .image-tagline.over-tag {
+    display: none;
+  }
+  .image-tagline.under-tag {
+    display: inline;
 }
