@@ -3,8 +3,9 @@
   font-family: 'Patua One', cursive;
 }
 html {
-  background: lightblue;  /* org background color #f2f1f4 */
+  background: #f2f1f4; /* #f2f1f4; */
   color: #19171c;
+  margin-bottom: 100px;
 }
 
 #herobox {
@@ -12,7 +13,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   max-width: 950px;
-  max-height: 600px;
+  max-height: 200px;
   object-fit: scale-down;
 }
 #hero img {
@@ -75,31 +76,34 @@ html {
 
 }
 .image-tagline {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'PT Sans Narrow', sans-serif;
   background-color: white;
   box-decoration-break: clone;
   box-shadow: 7px 0 0 white;
+  padding-top: 2px;
+  padding-bottom: 1px;
 }
+
+/* Shows tagline above title for Mobile view, media queries will display tagline below title for wider screens */
 .image-tagline.over-tag {
   display: inline;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 .image-tagline.under-tag {
   display: none;
 }
+
 .footer {
   clear: both;
   background: yellow;
 }
 
-/*
-MEDIA QUERIES SECTION
-Default is mobile view, then changes with growing screensize,.
-*/
+/* MEDIA QUERIES SECTION
+Default is mobile view, then changes with growing screensize */
 
 /* Tablet */
 @media (min-width: 600px) {
-  body {
-    /* background-color: yellow; */
-  }
   .article-section article {
     width: 50%;
   }
@@ -115,9 +119,6 @@ Default is mobile view, then changes with growing screensize,.
 
 /* Desktop */
 @media (min-width: 900px) {
-  body {
-    background-color: pink;
-  }
   .article-section article {
     width: 33.33%;
   }
