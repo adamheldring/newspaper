@@ -16,7 +16,7 @@ var hero = document.getElementById('hero-image');
       }
     }
   }
-  
+
   document.getElementById('article1').addEventListener('click', changeHero);
   document.getElementById('article2').addEventListener('click', changeHero);
   document.getElementById('article3').addEventListener('click', changeHero);
@@ -26,4 +26,14 @@ var hero = document.getElementById('hero-image');
   document.getElementById('article7').addEventListener('click', changeHero);
   document.getElementById('article8').addEventListener('click', changeHero);
   document.getElementById('article9').addEventListener('click', changeHero);
+
+  document.getElementById('article1').addEventListener('mouseover', changeHero);
+  document.getElementById('article2').addEventListener('mouseover', changeHero);
+  document.getElementById('article3').addEventListener('mouseover', changeHero);
+  document.getElementById('article4').addEventListener('mouseover', changeHero);
+  document.getElementById('article5').addEventListener('mouseover', changeHero);
+  document.getElementById('article6').addEventListener('mouseover', changeHero);
+  document.getElementById('article7').addEventListener('mouseover', changeHero);
+  document.getElementById('article8').addEventListener('mouseover', changeHero);
+  document.getElementById('article9').addEventListener('mouseover', changeHero);
 }

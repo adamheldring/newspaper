@@ -9,7 +9,7 @@ html {
 }
 
 #herobox {
-  background: rgba(0, 200, 0, 1);
+  background: rgba(0, 255, 0, 1);
   position: relative;
   overflow: hidden;
   margin-left: auto;
@@ -47,14 +47,20 @@ html {
 }
 
 .article-section .outerbox {
+  position: relative;
   float: left;
   margin: 0px;
   padding: 0px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.outerbox:hover {
+  bottom: 3px;
+  box-shadow: -2px 4px 10px rgba(0,0,0,0.2);
 }
 
 .article-section .innerbox {
   position: relative;
-  padding: 5px;
+  padding: 3px;
 }
 
 .article-section img {
