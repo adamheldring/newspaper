@@ -9,18 +9,34 @@ html {
 }
 
 #herobox {
+  background: rgba(0, 200, 0, 1);
+  position: relative;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
   max-width: 950px;
-  max-height: 200px;
-  object-fit: scale-down;
+  max-height: 250px;
 }
-#hero img {
+#herobox img {
+  position: relative;
   max-width: 100%;
-  max-height: 100%;
+  opacity: 0.7;
 }
-
+#hero-name-container {
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  max-width: 90%;
+}
+#newspaper-name {
+  display: inline;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.75);
+  box-decoration-break: clone;
+  box-shadow: 20px 0 0 rgba(0, 0, 0, 0.75), -20px 0 0 rgba(0, 0, 0, 0.75);
+}
 
 .article-section {
   display: block;
@@ -88,7 +104,6 @@ html {
 /* Shows tagline above title for Mobile view, media queries will display tagline below title for wider screens */
 .image-tagline.over-tag {
   display: inline;
-  font-family: 'PT Sans Narrow', sans-serif;
 }
 .image-tagline.under-tag {
   display: none;
@@ -104,6 +119,12 @@ Default is mobile view, then changes with growing screensize */
 
 /* Tablet */
 @media (min-width: 600px) {
+  #herobox {
+    max-height: 500px;
+  }
+  #newspaper-name {
+    font-size: 60px;
+  }
   .article-section article {
     width: 50%;
   }
@@ -119,6 +140,12 @@ Default is mobile view, then changes with growing screensize */
 
 /* Desktop */
 @media (min-width: 900px) {
+  #herobox {
+    max-height: 500px;
+  }
+  #newspaper-name {
+    font-size: 60px;
+  }
   .article-section article {
     width: 33.33%;
   }
