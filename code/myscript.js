@@ -26,12 +26,12 @@ var scrollPosition;
     }
   }
 
-    function transformHero(e) {
-      scrollPosition = document.documentElement.scrollTop;
-      if (scrollPosition < heroHeight) {
-        hero.style.opacity = 1 - (scrollPosition / heroHeight) * 2;
-      }
+  function transformHero(e) {
+    scrollPosition = document.documentElement.scrollTop;
+    if (scrollPosition < heroHeight) {
+      hero.style.opacity = 1 - (scrollPosition / heroHeight) * 2;
     }
+  }
 
   document.getElementById('article1').addEventListener('click', changeHero);
   document.getElementById('article2').addEventListener('click', changeHero);

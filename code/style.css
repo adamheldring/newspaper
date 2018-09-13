@@ -73,11 +73,6 @@ body {
   position: absolute;
   bottom: 10px;
   left: 0px;
-
-  /* Below: Using a left side border to simulate left side padding -
-  giving padding to broken lines too, not only first line.
-  (Could have used box-shadow for this too like I did right side padding below
-  but wanted to try and use both techniques for this excersice and for future reference.) */
   border: 7px solid white;
   border-top: none;
   border-right: none;
