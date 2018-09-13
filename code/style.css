@@ -52,9 +52,9 @@ body {
   float: left;
   margin: 0px;
   padding: 0px;
-  transition: box-shadow 0.3s ease-in-out; /* Adds hover effect on articles */
+  transition: box-shadow 0.3s ease-in-out;
 }
-.outerbox:hover { /* Sets hover effect into action */
+.outerbox:hover {
   bottom: 3px;
   box-shadow: -2px 4px 10px rgba(0,0,0,0.2);
 }
@@ -88,7 +88,7 @@ body {
   display: inline;
 
   /* Using a right-side only box-shadow to simulate right-side padding -
-  giving padding to broken line too, not only last line.*/
+  giving padding to broken lines, not only last line.*/
   box-decoration-break: clone; /* Resolves issue with Firefox that defaults this value as 'split' */
   box-shadow: 7px 0 0 white;
 
@@ -103,7 +103,7 @@ body {
   padding-bottom: 1px;
 }
 
-/* Shows tagline above title for Mobile view, media queries will display tagline below title for wider screens */
+/* Shows tagline above title for Mobile view */
 .image-tagline.over-tag {
   display: inline;
 }
