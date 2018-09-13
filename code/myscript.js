@@ -27,7 +27,7 @@ var scrollPosition;
   }
 
   function transformHero(e) {
-    scrollPosition = document.documentElement.scrollTop;
+    scrollPosition = document.scrollingElement.scrollTop;
     if (scrollPosition < heroHeight) {
       hero.style.opacity = 1 - (scrollPosition / heroHeight) * 2;
     }
